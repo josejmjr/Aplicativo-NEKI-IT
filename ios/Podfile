@@ -34,6 +34,8 @@ target 'Exemplo_S2P2' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+
   target 'Exemplo_S2P2Tests' do
     inherit! :search_paths
     # Pods for testing

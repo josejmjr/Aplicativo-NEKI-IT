@@ -11,7 +11,7 @@ export default class App extends Component {
   render() {
     return (
 
-      <LinearGradient colors={['#04b6b8', '#1b536a']} style={styles.mainContainer}>
+      <LinearGradient colors={['#04b6b8', '#1b536a']} style={styles.linearGradient}>
         <View style={styles.mainContainer}>
           <Image
             source={require('./src/imagens/neki.png')}
@@ -39,23 +39,26 @@ export default class App extends Component {
           </TouchableOpacity>
         </View>
       </LinearGradient>
+
     )
   }
 }
 
 const styles = StyleSheet.create({
+  LinearGradient: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   mainContainer: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
+    height: 680,
   },
   logo: {
     width: 130,
-    height: 135,
-    marginBottom: 50,
-    //marginTop: 40,
-    opacity: .6
+    height: 136,
+    margin: 40,
   },
   input: {
     marginTop: 10,
@@ -69,9 +72,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '300',
     padding: 10,
-    color: '#fff',
-    fontWeight: 'bold',
-    marginBottom: 20,
   },
   botao: {
     width: 250,
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     borderColor: '#00ff8c',
     borderWidth: 1,
     padding: 20,
-    marginTop: 40,
+    marginTop: 20,
     marginBottom: 20,
     borderRadius: 40,
     alignItems: 'center',
