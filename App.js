@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Alert, Text, StyleSheet, View, Image, TextInput, TouchableOpacity } from 'react-native'
+import { Alert, Text, StyleSheet, View, Image, TextInput, TouchableOpacity, ScrollView } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient';
 
 export default class App extends Component {
@@ -10,9 +10,12 @@ export default class App extends Component {
 
   render() {
     return (
-
+      
+     <ScrollView contentContainerStyle={styles.contentContainer}>
       <LinearGradient colors={['#04b6b8', '#1b536a']} style={styles.mainContainer}>
+        
         <View style={styles.mainContainer}>
+          
           <Image
             source={require('./src/imagens/neki.png')}
             style={styles.logo}
@@ -37,13 +40,22 @@ export default class App extends Component {
           >
             <Text style={styles.botaoText}>Login</Text>
           </TouchableOpacity>
+         
         </View>
+        
       </LinearGradient>
+     </ScrollView>
+    
     )
   }
 }
 
 const styles = StyleSheet.create({
+
+  contentContainer:{
+    flex: 1,
+  },
+
   mainContainer: {
     flex: 1,
     justifyContent: 'center',
@@ -51,8 +63,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   logo: {
-    width: 130,
-    height: 135,
+    width: 170,
+    height: 175,
     marginBottom: 50,
     //marginTop: 40,
     opacity: .6
@@ -66,11 +78,10 @@ const styles = StyleSheet.create({
     borderRightColor: 'transparent',
     borderLeftColor: 'transparent',
     borderWidth: 1,
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: '300',
     padding: 10,
     color: '#fff',
-    fontWeight: 'bold',
     marginBottom: 20,
   },
   botao: {
